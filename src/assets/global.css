@@ -1,0 +1,65 @@
+*, body {
+	font-family: 'InterDisplay', sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+@supports (font-variation-settings: normal) {
+	body {
+		font-family: 'InterDisplay var', sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	}
+	input, button, textarea {
+		font-family: 'InterDisplay var', sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	}
+}
+
+.flex-center {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.zero {
+	margin: 0;
+}
+
+.noselect, img, br, button {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.center {
+	text-align: center;
+}
+
+a {
+	text-decoration: none;
+	color: #222;
+	opacity: 0.7;
+	border-bottom: solid 1px transparent;
+	transition: 0.3s;
+}
+
+a:hover {
+	border-bottom: solid 1px #222;
+	opacity: 1;
+}
+
+img {
+	width: 100%;
+}
+
+strong {
+	font-weight: 600;
+}
+
+::selection {
+	background: rgba(60, 136, 236, 0.233)
+}
+
+p, ul li {
+	opacity: 0.8;
+}
