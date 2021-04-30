@@ -1,6 +1,7 @@
 <script>
 	import axios from 'axios'
 	let email = ''
+	let response = false
 	let loading = false
 	const sendEmail = async () => {
 		loading = true
@@ -10,6 +11,7 @@
 			})
 			.then((res) => {
 				loading = false
+				response = res.data
 				console.log(res.data)
 			})
 			.catch((err) => {
@@ -27,11 +29,16 @@
 			<div class="flex">
 				<input
 					bind:value={email}
-					type="text"
+					type="email"
 					placeholder="your@email.com"
 					class="zero input"
+					required
 				/>
-				<button type="submit" class={loading ? 'zero btn loading' : 'zero btn'}>
+				<button
+					type="submit"
+					disabled={loading ? true : false}
+					class={loading ? 'zero btn loading' : 'zero btn'}
+				>
 					{#if loading == true}
 						<div class="flex-center">
 							<div class="loader" />
@@ -42,10 +49,17 @@
 				</button>
 			</div>
 		</form>
+		{#if response}
+			<p class="center zero thanks">{response.message}</p>
+		{/if}
 	</div>
 </div>
 
 <style scoped>
+	.thanks {
+		margin-top: 0.5em;
+	}
+
 	.flex {
 		display: -webkit-box;
 		display: -webkit-flex;
