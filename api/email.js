@@ -2,6 +2,7 @@ var Airtable = require('airtable')
 var base = new Airtable({ apiKey: process.env.AIRTABLE_API_KEY }).base(
 	process.env.AIRTABLE_BASE_ID
 )
+const tableName = 'Emails'
 
 function validate(email) {
 	const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
@@ -9,26 +10,25 @@ function validate(email) {
 }
 
 module.exports = async (req, res) => {
-	const { body } = req
-
-	if (validate(body.email)) {
-		base('Table 1')
+	const email = req.body.email.toLowerCase()
+	if (validate(email)) {
+		base(tableName)
 			.select({
 				maxRecords: 1,
-				filterByFormula: `LOWER(Email) = "${body.email.toLowerCase()}"`,
+				filterByFormula: `LOWER(Email) = "${email}"`,
 			})
 			.eachPage(function page(records) {
 				if (records.length > 0) {
 					return res.send({
 						error: true,
-						message: `Your email is already registered! (${body.email})`,
+						message: `Your email is already registered! (${email})`,
 					})
 				} else {
-					base('Table 1').create(
+					base(tableName).create(
 						[
 							{
 								fields: {
-									Email: body.email.toLowerCase(),
+									Email: email,
 								},
 							},
 						],
@@ -40,7 +40,7 @@ module.exports = async (req, res) => {
 								console.log(record.getId())
 								return res.json({
 									error: false,
-									message: `Thank you for signing up! (${body.email})`,
+									message: `Thank you for signing up! (${email})`,
 								})
 							})
 						}

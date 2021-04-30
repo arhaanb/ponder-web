@@ -1,0 +1,10 @@
+{
+	"github": {
+		"autoAlias": true,
+		"enabled": true,
+		"silent": true
+	},
+	"cleanUrls": true,
+	"trailingSlash": false,
+	"public": false
+}
