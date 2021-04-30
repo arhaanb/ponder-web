@@ -5,7 +5,7 @@
 	const sendEmail = async () => {
 		loading = true
 		axios
-			.post('/api/email', {
+			.post('/ponder/api/email', {
 				email,
 			})
 			.then((res) => {
@@ -147,6 +147,15 @@
 		100% {
 			-webkit-transform: rotate(360deg);
 			transform: rotate(360deg);
+		}
+	}
+
+	@media (max-width: 750px) {
+		.input {
+			width: 65%;
+		}
+		.btn {
+			width: 35%;
 		}
 	}
 </style>

@@ -211,6 +211,7 @@
 		}
 
 		footer.footer {
+			text-align: center !important;
 			padding: 0 !important;
 			padding: 1em 0 !important;
 		}
