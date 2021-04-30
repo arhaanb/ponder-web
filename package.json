@@ -1,9 +1,9 @@
 {
 	"name": "ponder",
-	"version": "0.0.0",
+	"version": "1.0.0",
 	"scripts": {
 		"dev": "vite --open",
-		"build": "vite build",
+		"build": "vite build --base=/ponder/",
 		"serve": "vite preview"
 	},
 	"prettier": {
@@ -16,5 +16,9 @@
 		"@sveltejs/vite-plugin-svelte": "^1.0.0-next.7",
 		"svelte": "^3.37.0",
 		"vite": "^2.2.3"
+	},
+	"dependencies": {
+		"airtable": "^0.11.0",
+		"axios": "^0.21.1"
 	}
 }

@@ -1,7 +1,7 @@
 <script>
 	import logo from './assets/logo.svg'
 	import mockup from './assets/mock.png'
-	import Counter from './lib/Counter.svelte'
+	import Email from './lib/Email.svelte'
 
 	import { onMount } from 'svelte'
 
@@ -24,7 +24,16 @@
 				<br class="anti" />
 				focus and <i>think better</i>.
 			</p>
-			<button class="btn zero">Coming soon</button>
+			<div class="flex">
+				<button class="btn zero">Coming soon</button>
+				<p class="zero">
+					<a
+						href="//github.com/arhaanb/ponder-web"
+						target="_blank"
+						class="learn">View source &rarr;</a
+					>
+				</p>
+			</div>
 		</div>
 
 		<hr />
@@ -66,13 +75,13 @@
 						</div>
 					</div>
 					<br />
-					<div class="vid-con">
+					<div class="vid-con noselect">
 						<iframe
 							title="Ponder Video"
 							src="//www.youtube.com/embed/YcaCoP7D_pk"
 							frameborder="0"
 							allowfullscreen
-							class="video"
+							class="video noselect"
 						/>
 					</div>
 					<br />
@@ -80,7 +89,7 @@
 			</div>
 		</section>
 
-		<Counter />
+		<Email />
 
 		<br />
 		<hr />
@@ -101,7 +110,9 @@
 		<footer class="footer">
 			<div class="six columns">
 				<p class="zero">
-					&copy; Ponder 2018 &mdash; {year || 21}
+					&copy; <a href="//github.com/arhaanb/ponder-web" target="_blank"
+						>Ponder 2019 &mdash; {year || 21}</a
+					>
 				</p>
 			</div>
 			<div class="six columns right">
@@ -116,6 +127,12 @@
 </main>
 
 <style scoped>
+	.flex {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
 	.vid-con {
 		position: relative;
 		width: 100%;
@@ -152,7 +169,7 @@
 	}
 
 	#control .take {
-		margin-bottom: 0.25em;
+		margin-bottom: 0.5em;
 	}
 
 	.topped {
@@ -172,6 +189,7 @@
 		letter-spacing: 0.1em;
 		background-color: transparent;
 		border-radius: 5px;
+		margin-right: 1.25em;
 	}
 
 	ul {
