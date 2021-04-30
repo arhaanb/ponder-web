@@ -1,7 +1,7 @@
 <script>
 	import axios from 'axios'
 	let email = ''
-	let response = false
+	let msg = ''
 	let loading = false
 	const sendEmail = async () => {
 		loading = true
@@ -11,7 +11,8 @@
 			})
 			.then((res) => {
 				loading = false
-				response = res.data
+				email = ''
+				msg = res.data.message
 				console.log(res.data)
 			})
 			.catch((err) => {
@@ -49,8 +50,8 @@
 				</button>
 			</div>
 		</form>
-		{#if response}
-			<p class="center zero thanks">{response.message}</p>
+		{#if msg !== ''}
+			<p class="center zero thanks">{msg}</p>
 		{/if}
 	</div>
 </div>
