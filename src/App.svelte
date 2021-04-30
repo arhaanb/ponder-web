@@ -24,7 +24,7 @@
 				<br class="anti" />
 				focus and <i>think better</i>.
 			</p>
-			<div class="flex">
+			<div class="flex-link">
 				<button class="btn zero">Coming soon</button>
 				<p class="zero">
 					<a
@@ -127,7 +127,7 @@
 </main>
 
 <style scoped>
-	.flex {
+	.flex-link {
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -214,6 +214,19 @@
 			text-align: center !important;
 			padding: 0 !important;
 			padding: 1em 0 !important;
+		}
+
+		ul {
+			margin-left: 0;
+		}
+
+		.flex-link {
+			flex-direction: column;
+		}
+
+		.btn {
+			margin-right: 0;
+			margin-bottom: 0.5em;
 		}
 	}
 </style>

@@ -13,7 +13,6 @@
 				loading = false
 				email = ''
 				msg = res.data.message
-				console.log(res.data)
 			})
 			.catch((err) => {
 				loading = false
