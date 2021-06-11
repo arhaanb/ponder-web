@@ -57,7 +57,7 @@ strong {
 }
 
 ::selection {
-	background: rgba(60, 136, 236, 0.233)
+	background: rgba(60, 136, 236, 0.233);
 }
 
 p, ul li {

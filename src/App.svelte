@@ -53,7 +53,7 @@
 								productive. Ponder changes the way you think.
 							</p>
 							<p>
-								<a class="learn" href="//arhaanb.co/ponderppt" target="_blank">
+								<a class="learn" href="//arhn.us/ponderppt" target="_blank">
 									Learn more &rarr;
 								</a>
 							</p>

@@ -7,7 +7,7 @@
 		loading = true
 		axios
 			.post('/ponder/api/email', {
-				email,
+				email
 			})
 			.then((res) => {
 				loading = false
@@ -86,6 +86,7 @@
 		border-radius: 5px 0 0 5px;
 		border: solid 1px rgba(34, 34, 34, 0.26);
 		font-size: 1em;
+		transition: 0.2s;
 	}
 
 	.input:focus {

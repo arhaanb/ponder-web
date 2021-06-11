@@ -10,7 +10,8 @@
 		"tabWidth": 2,
 		"useTabs": true,
 		"semi": false,
-		"singleQuote": true
+		"singleQuote": true,
+		"trailingComma": "none"
 	},
 	"devDependencies": {
 		"@sveltejs/vite-plugin-svelte": "^1.0.0-next.7",
