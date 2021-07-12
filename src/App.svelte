@@ -118,7 +118,7 @@
 			<div class="six columns right">
 				<p class="zero">
 					Made with 💖 by
-					<a href="//arhaanb.co" target="_blank">Arhaan Bahadur</a>
+					<a href="//arhaanbahadur.co" target="_blank">Arhaan Bahadur</a>
 				</p>
 			</div>
 			<div class="u-cf" />
