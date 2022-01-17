@@ -17,7 +17,7 @@
 	<div class="container">
 		<br /><br /><br />
 		<div class="flex-center">
-			<img src={logo} draggable="false" class="svelte" alt="Svelte Logo" />
+			<img src={logo} draggable="false" class="ponderlogo" alt="Ponder Logo" />
 			<h1 class="zero">Ponder</h1>
 			<p class="zero center topped">
 				An app that helps you
@@ -147,7 +147,7 @@
 		height: 100%;
 		border-radius: 0.5em;
 	}
-	.svelte {
+	.ponderlogo {
 		width: 7em;
 		border: solid 1px rgba(34, 34, 34, 0.226);
 		border-radius: 1em;
