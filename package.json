@@ -3,7 +3,7 @@
 	"version": "1.0.0",
 	"scripts": {
 		"dev": "vite --open",
-		"build": "vite build --base=/ponder/",
+		"build": "vite build",
 		"serve": "vite preview"
 	},
 	"prettier": {
